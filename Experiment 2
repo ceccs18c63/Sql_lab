@@ -1,0 +1,24 @@
+#1
+CREATE TABLE Employee (
+	`code` CHAR(5) NOT NULL,
+    `name` CHAR(20) NOT NULL, 
+    `designation` CHAR(30) NOT NULL, 
+    `dob` DATE NOT NULL,
+    `salary` NUMERIC
+);
+
+#2
+INSERT INTO Employee (`code`, `name`, `designation`, `dob`, `salary`)
+VALUES 
+("e2", "Jaffer", "Manager", "1989-5-10", 40500),
+("e1","Paul", "Salesman", "1996-4-20", 20500);
+
+#3
+SELECT * FROM Employee;
+
+#4
+UPDATE Employee
+SET `salary` = 22000 WHERE `code` = "e1";
+
+#5
+DELETE FROM Employee WHERE `code` = "e2";
